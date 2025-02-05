@@ -1,60 +1,114 @@
-        /* Définition du fond d'écran */
-        body {
-            margin: 0;
-            height: 100vh;
-            background-image: url('https://img.freepik.com/photos-gratuite/illustration-personnage-anime-sous-pluie_23-2151394700.jpg?t=st=1738138299~exp=1738141899~hmac=bb61331feedc7aa1ef56ecab1022aa40cc6aa8196395a5f205d717cf2977018b&w=1380');
-            /* Image d'arrière-plan */
-            background-size: cover;
-            /* L'image couvre toute la zone disponible */
-            background-position: center;
-            /* Centre l'image */
+  /* Définition du fond d'écran */
+  body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/photos-gratuite/illustration-personnage-anime-sous-pluie_23-2151394700.jpg?t=st=1738138299~exp=1738141899~hmac=bb61331feedc7aa1ef56ecab1022aa40cc6aa8196395a5f205d717cf2977018b&w=1380');
+    /* Image d'arrière-plan */
+    background-size: cover;
+    /* L'image couvre toute la zone disponible */
+    background-position: center;
+    /* Centre l'image */
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        /* Conteneur du menu */
-        .menu {
-            position: relative;
-            width: 200px;
-            height: 200px;
-        }
+/* Conteneur du menu */
+.menu {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
 
-        /* Liens du menu rapprochés initialement sur un point */
-        .menu a {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background: transparent;
-            color: white;
-            text-align: center;
-            line-height: 50px;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            transition: transform 0.5s ease, background 0.3s ease;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+/* Liens du menu rapprochés initialement sur un point */
+.menu a {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.5s ease, background 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-        /* Effet de survol : placement en carré avec écartement égal */
-        .menu:hover a:nth-child(1) {
-            transform: translate(-75px, -75px) scale(1.2);
-        }
+/* Effet de survol : placement en carré avec écartement égal */
+.menu:hover a:nth-child(1) {
+    transform: translate(-75px, -75px) scale(1.2);
+}
 
-        .menu:hover a:nth-child(2) {
-            transform: translate(75px, -75px) scale(1.2);
-        }
+.menu:hover a:nth-child(2) {
+    transform: translate(75px, -75px) scale(1.2);
+}
 
-        .menu:hover a:nth-child(3) {
-            transform: translate(75px, 75px) scale(1.2);
-        }
+.menu:hover a:nth-child(3) {
+    transform: translate(75px, 75px) scale(1.2);
+}
 
-        .menu:hover a:nth-child(4) {
-            transform: translate(-75px, 75px) scale(1.2);
-        }
+.menu:hover a:nth-child(4) {
+    transform: translate(-75px, 75px) scale(1.2);
+}
+/* Effet de survol : placement en carré avec écartement égal */
+.menu1:hover a:nth-child(1) {
+    transform: translate(-75px, -75px) scale(1.2);
+}
 
-        
+.menu1:hover a:nth-child(2) {
+    transform: translate(75px, -75px) scale(1.2);
+}
+
+.menu1:hover a:nth-child(3) {
+    transform: translate(75px, 75px) scale(1.2);
+}
+
+.menu1:hover a:nth-child(4) {
+    transform: translate(-75px, 75px) scale(1.2);
+}
+/* Conteneur du menu */
+.menu1 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+/* Liens du menu rapprochés initialement sur un point */
+.menu1 a {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.5s ease, background 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content {
+    text-align: center; /* Centre le texte */
+    color: #fff; /* Couleur blanche pour le texte */
+}
+.content h1 {
+    font-size: 4rem; /* Grande taille de police pour le titre */
+    color: #ffffff; /* Couleur blanche */
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* Ajoute un effet lumineux au texte */
+}
+
+.content p {
+    font-size: 1.5rem; /* Taille intermédiaire pour les paragraphes */
+    margin: 20px 0; /* Espacement vertical autour du texte */
+    color: #ccc; /* Couleur gris clair */
+}

@@ -1,0 +1,309 @@
+
+body {
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: Arial, sans-serif; /* Définit la police de base */
+    background: linear-gradient(180deg, #0d0d0d, #1a1a2e); /* Dégradé vertical pour l'arrière-plan */
+    display: flex; /* Centre le contenu horizontalement et verticalement */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Supprime les barres de défilement */
+}
+.background {
+    position: absolute; /* Positionne l'arrière-plan par rapport au document */
+    top: 0; /* Place en haut */
+    left: 0; /* Place à gauche */
+    width: 100%; /* Occupe toute la largeur de l'écran */
+    height: 100%; /* Occupe toute la hauteur de l'écran */
+    background-image: url('https://img.freepik.com/photos-gratuite/japon-art-numerique-fond_23-2151546166.jpg'); /* Image d'arrière-plan */
+    background-size: cover; /* L'image couvre toute la zone disponible */
+    background-position: center; /* Centre l'image */
+    filter: brightness(70%) blur(2px); /* Réduit la luminosité et applique un flou */
+    z-index: -1; /* Positionne l'arrière-plan derrière les autres éléments */
+}
+/* --- Style général pour le corps de la page --- */
+
+/* --- Arrière-plan avec image et effets visuels --- */
+
+/* --- Contenu principal (texte et bouton) --- */
+.content {
+    text-align: center; /* Centre le texte */
+    color: #fff; /* Couleur blanche pour le texte */
+}
+.content h1 {
+    font-size: 4rem; /* Grande taille de police pour le titre */
+    color: #ffffff; /* Couleur blanche */
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* Ajoute un effet lumineux au texte */
+}
+
+.content p {
+    font-size: 1.5rem; /* Taille intermédiaire pour les paragraphes */
+    margin: 20px 0; /* Espacement vertical autour du texte */
+    color: #ccc; /* Couleur gris clair */
+}
+
+/* --- Bouton avec effet néon --- */
+.neon-button {
+    display: inline-block; /* Affiche le bouton comme un élément en ligne avec possibilité de marges/paddings */
+    padding: 10px 20px; /* Espacement interne */
+    font-size: 1.2rem; /* Taille du texte */
+    color: #fff; /* Texte blanc */
+    background: linear-gradient(90deg, #ff007f, #0099ff); /* Dégradé horizontal pour le fond du bouton */
+    border: none; /* Supprime les bordures */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    text-decoration: none; /* Supprime le soulignement */
+    box-shadow: 0 0 10px #ff007f, 0 0 20px #0099ff; /* Ajoute un effet lumineux autour du bouton */
+    transition: box-shadow 0.3s; /* Animation pour l’effet lumineux au survol */
+}
+.neon-button:hover {
+    box-shadow: 0 0 20px #ff007f, 0 0 40px #0099ff; /* Amplifie l'effet lumineux au survol */
+}
+/* --- Menu plein écran --- */
+.menu {
+    position: fixed; /* Positionne le menu de manière fixe par rapport à l’écran */
+    top: 0; /* Place le menu en haut */
+    left: 0; /* Place le menu à gauche */
+    width: 100%; /* Le menu occupe toute la largeur de l'écran */
+    height: 100%; /* Le menu occupe toute la hauteur de l'écran */
+    background: rgba(0, 0, 0, 0.95); /* Fond semi-transparent noir */
+    display: none; /* Caché par défaut */
+    flex-direction: column; /* Aligne les éléments du menu verticalement */
+    justify-content: center; /* Centre les liens verticalement */
+    align-items: center; /* Centre les liens horizontalement */
+    z-index: 100; /* Positionne le menu au-dessus des autres éléments */
+}
+/* --- Menu actif (affiché) --- */
+.menu.active {
+    display: flex; /* Affiche le menu lorsqu'il est actif */
+}
+/* --- Liens du menu --- */
+.menu a {
+    color: #fff; /* Couleur blanche pour le texte */
+    font-size: 2rem; /* Grande taille pour les liens */
+    margin: 20px 0; /* Espacement vertical entre les liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    text-shadow: 0 0 10px #ff007f, 0 0 20px #0099ff; /* Ajoute un effet lumineux au texte */
+    transition: color 0.3s, transform 0.3s ease-in-out; /* Animation au survol */
+}
+.menu a:hover {
+    color: #00ffcc; /* Change la couleur au survol */
+    transform: translateY(-5px); /* Déplace légèrement le lien vers le haut */
+}
+/* --- En-tête du menu --- */
+.menu-header {
+    position: absolute; /* Positionnement absolu dans le menu */
+    top: 10%; /* Place l'en-tête à 10% du haut de l'écran */
+    font-size: 2.5rem; /* Grande taille de police */
+    color: #ff007f; /* Couleur néon pour l'en-tête */
+    text-shadow: 0 0 15px #ff007f; /* Effet lumineux */
+}
+/* --- Pied de page du menu --- */
+.menu-footer {
+    position: absolute; /* Positionnement absolu */
+    bottom: 10%; /* Place le pied de page à 10% du bas de l'écran */
+    font-size: 1.2rem; /* Taille de police réduite */
+    color: #ccc; /* Couleur gris clair */
+}
+.menu-footer a {
+    color: #ff007f; /* Lien coloré pour correspondre au style néon */
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold; /* Met en valeur le texte */
+}
+
+/* --- Bouton de fermeture du menu --- */
+.close-button {
+    position: absolute; /* Positionnement absolu */
+    bottom: 20px; /* Place le bouton en bas du menu */
+    padding: 10px 20px; /* Espacement interne */
+    font-size: 1rem; /* Taille du texte */
+    background: linear-gradient(90deg, #0099ff, #ff007f); /* Dégradé pour correspondre au style néon */
+    color: white; /* Texte blanc */
+    border: none; /* Supprime les bordures */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur cliquable */
+    box-shadow: 0 0 10px #ff007f, 0 0 20px #0099ff; /* Effet lumineux autour du bouton */
+    transition: box-shadow 0.3s ease; /* Animation pour l’effet lumineux */
+}
+.close-button:hover {
+    box-shadow: 0 0 20px #ff007f, 0 0 40px #0099ff; /* Amplifie l'effet lumineux au survol */
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%); /* Hors de l'écran au départ */
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+}
+/* --- Liens du menu --- */
+.menu a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-decoration: none;
+    text-shadow: 0 0 10px #ff007f, 0 0 20px #0099ff;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+.menu a:hover {
+    color: #00ffcc;
+    transform: translateY(-5px);
+}
+/* --- Bouton de fermeture (icône ✕) --- */
+.menu .close-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(90deg, #0099ff, #ff007f);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff007f, 0 0 20px #0099ff;
+    z-index: 102;
+}
+.menu .close-label span {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+/* --- Gestion des états avec la case à cocher --- */
+#menu-toggle {
+    display: none; /* Cache la case à cocher */
+}
+
+#menu-toggle:checked ~ .menu {
+    transform: translateY(0); /* Affiche le menu */
+}
+
+#menu-toggle:checked ~ .menu-toggle-label {
+    opacity: 0; /* Cache le bouton d'ouverture */
+    pointer-events: none; /* Désactive les clics */
+}
+
+#menu-toggle:not(:checked) ~ .menu {
+    transform: translateY(-100%); /* Cache le menu */
+}
+/* --- Bouton d'ouverture du menu --- */
+.menu-button {
+    position: absolute; /* Position absolue sur l'écran */
+    top: 20px; /* Place le bouton en haut */
+    right: 20px; /* Place le bouton à droite */
+    width: 50px; /* Largeur du bouton */
+    height: 50px; /* Hauteur du bouton */
+    background: linear-gradient(90deg, #ff007f, #0099ff); /* Dégradé néon */
+    border: none; /* Supprime les bordures */
+    border-radius: 50%; /* Bouton circulaire */
+    box-shadow: 0 0 10px #ff007f, 0 0 20px #0099ff; /* Effet lumineux autour du bouton */
+    cursor: pointer; /* Curseur en main pour indiquer un élément cliquable */
+    z-index: 101; /* Positionne au-dessus du menu */
+}
+.fullscrean{
+    height: 5vh;
+}
+.gros-menu{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+}
+.gros-menu a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 20px;
+}
+body {
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: Arial, sans-serif; /* Définit la police de base */
+    background: linear-gradient(180deg, #0d0d0d, #1a1a2e); /* Dégradé vertical pour l'arrière-plan */
+    display: flex; /* Centre le contenu horizontalement et verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    overflow: hidden; /* Supprime les barres de défilement */
+}
+
+/* --- Menu complet (visible par défaut au-dessus de 700px) --- */
+.menu {
+    display: flex; /* Le menu est affiché par défaut */
+    justify-content: center; /* Aligne les éléments du menu au centre */
+    align-items: center; /* Aligne les éléments du menu verticalement */
+    gap: 20px; /* Espacement entre les liens */
+    background-color: #333; /* Fond sombre pour le menu */
+    padding: 10px 0; /* Espacement vertical du menu */
+    position: fixed; /* Position fixe en haut de l'écran */
+    top: 0; /* Le menu est fixé en haut */
+    width: 100%; /* Le menu prend toute la largeur de l'écran */
+    z-index: 100; /* Positionne le menu au-dessus des autres éléments */
+}
+
+/* --- Liens dans le menu --- */
+.menu a {
+    color: white; /* Couleur des liens en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-size: 2.0em; /* Taille de police des liens */
+    padding: 10px 20px; /* Espacement interne des liens */
+    transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+/* --- Changement de couleur des liens au survol --- */
+.menu a:hover {
+    color: #ff007f; /* Changement de couleur au survol (couleur néon) */
+}
+
+/* --- Bouton rond d'ouverture du menu (visible sous 700px) --- */
+.menu-button {
+    position: fixed; /* Position fixe pour le bouton */
+    top: 20px; /* Positionné en haut */
+    right: 20px; /* Positionné à droite */
+    width: 50px; /* Taille du bouton */
+    height: 50px; /* Taille du bouton */
+    background: linear-gradient(90deg, #ff007f, #0099ff); /* Dégradé néon pour le fond */
+    border: none; /* Supprime les bordures */
+    border-radius: 50%; /* Forme ronde pour le bouton */
+    box-shadow: 0 0 10px #ff007f, 0 0 20px #0099ff; /* Effet lumineux autour du bouton */
+    cursor: pointer; /* Curseur de main au survol */
+    z-index: 101; /* S'assurer que le bouton soit au-dessus du menu */
+}
+
+/* --- Icône de menu (exemple hamburger) --- */
+.menu-button span {
+    font-size: 2rem; /* Taille de l'icône */
+    color: white; /* Couleur de l'icône */
+}
+
+/* --- Media query : affichage du menu uniquement au-dessus de 700px --- */
+@media (min-width: 870px) {
+    /* --- Afficher le menu complet au-dessus de 700px --- */
+    .menu {
+        display: flex; /* Le menu est visible */
+    }
+
+    /* --- Cacher le bouton rond au-dessus de 700px --- */
+    .menu-button {
+        display: none; /* Cache le bouton d'ouverture du menu */
+    }
+}
+
+/* --- Media query : affichage du menu sous 700px --- */
+@media (max-width: 870px) {
+    /* --- Cacher le menu sous 700px --- */
+    .gros-menu {
+        display: none; /* Cacher le menu sur les petits écrans */
+    }
+
+    /* --- Afficher le bouton rond sous 700px --- */
+    .menu-button {
+        display: block; /* Afficher le bouton rond */
+    }
+}
